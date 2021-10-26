@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
 import { AuthenticateUserService } from "../services/AuthenticateUserService";
 
-class AutheticateUserController {
+class AuthenticateUserController {
   async handle(request: Request, response: Response) {
+    
     const { code } = request.body;
 
     const service = new AuthenticateUserService();
@@ -12,4 +13,4 @@ class AutheticateUserController {
   }
 }
 
-export { AutheticateUserController };
+export { AuthenticateUserController };
